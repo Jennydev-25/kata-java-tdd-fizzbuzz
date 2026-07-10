@@ -26,4 +26,11 @@ class FizzBuzzTest {
         String result = fizzBuzz.convert(15);
         assertEquals("FizzBuzz", result);
     }
+
+    @Test
+    void testConvertReturnsNumberWhenNoRuleApplies() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(7);
+        assertEquals("7", result);
+    }
 }

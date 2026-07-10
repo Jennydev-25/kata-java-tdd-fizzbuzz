@@ -12,4 +12,11 @@ class FizzBuzzTest {
         String result = fizzBuzz.convert(3);
         assertEquals("Fizz", result);
     }
+
+    @Test
+    void testConvertReturnsBuzzWhenDivisibleByFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(5);
+        assertEquals("Buzz", result);
+    }
 }

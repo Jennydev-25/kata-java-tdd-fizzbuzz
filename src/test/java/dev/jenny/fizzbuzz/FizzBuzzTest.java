@@ -1,12 +1,15 @@
 package dev.jenny.fizzbuzz;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-public class FizzBuzzTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class FizzBuzzTest {
 
     @Test
-    public void test_fizzbuzz_example() {
-        assertTrue(true);
+    void testConvertReturnsFizzWhenDivisibleByThree() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(3);
+        assertEquals("Fizz", result);
     }
 }

@@ -3,16 +3,17 @@ package dev.jenny.fizzbuzz;
 public class FizzBuzz {
 
     public String convert(int number) {
-        if (isFizz(number) && isBuzz(number)) {
-            return "FizzBuzz";
+        String result = "";
+        if (isFizz(number)) {
+            result += "Fizz";
         }
         if (isBuzz(number)) {
-            return "Buzz";
+            result += "Buzz";
         }
-        if (isFizz(number)) {
-            return "Fizz";
+        if (result.isEmpty()) {
+            return String.valueOf(number);
         }
-        return String.valueOf(number);
+        return result;
     }
 
     private boolean isFizz(int number) {

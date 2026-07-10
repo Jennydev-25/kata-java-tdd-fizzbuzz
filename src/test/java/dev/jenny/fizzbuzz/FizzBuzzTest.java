@@ -33,4 +33,11 @@ class FizzBuzzTest {
         String result = fizzBuzz.convert(7);
         assertEquals("7", result);
     }
+
+    @Test
+    void testConvertReturnsFizzWhenNumberContainsThree() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(13);
+        assertEquals("Fizz", result);
+    }
 }

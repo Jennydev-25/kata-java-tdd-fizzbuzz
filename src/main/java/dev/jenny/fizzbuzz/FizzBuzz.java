@@ -3,15 +3,23 @@ package dev.jenny.fizzbuzz;
 public class FizzBuzz {
 
     public String convert(int number) {
-        if (number % 3 == 0 && number % 5 == 0) {
+        if (isFizz(number) && isBuzz(number)) {
             return "FizzBuzz";
         }
-        if (number % 5 == 0) {
+        if (isBuzz(number)) {
             return "Buzz";
         }
-        if (number % 3 == 0) {
+        if (isFizz(number)) {
             return "Fizz";
         }
         return String.valueOf(number);
+    }
+
+    private boolean isFizz(int number) {
+        return number % 3 == 0 || String.valueOf(number).contains("3");
+    }
+
+    private boolean isBuzz(int number) {
+        return number % 5 == 0 || String.valueOf(number).contains("5");
     }
 }

@@ -40,4 +40,11 @@ class FizzBuzzTest {
         String result = fizzBuzz.convert(13);
         assertEquals("Fizz", result);
     }
+
+    @Test
+    void testConvertReturnsBuzzWhenNumberContainsFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(52);
+        assertEquals("Buzz", result);
+    }
 }

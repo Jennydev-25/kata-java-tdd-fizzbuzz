@@ -19,4 +19,11 @@ class FizzBuzzTest {
         String result = fizzBuzz.convert(5);
         assertEquals("Buzz", result);
     }
+
+    @Test
+    void testConvertReturnsFizzBuzzWhenDivisibleByThreeAndFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.convert(15);
+        assertEquals("FizzBuzz", result);
+    }
 }

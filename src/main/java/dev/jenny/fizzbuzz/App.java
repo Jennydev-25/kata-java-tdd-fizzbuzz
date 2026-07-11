@@ -1,17 +1,13 @@
 package dev.jenny.fizzbuzz;
 
-/**
- * Hello world!
- */
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        for (int number = 1; number <= 100; number++) {
+            System.out.println(fizzBuzz.convert(number));
+        }
     }
 }
